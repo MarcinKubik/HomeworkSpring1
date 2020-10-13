@@ -1,0 +1,1 @@
+[Customer{id=1, firstName='Marcin', lastName='Kubik'}, Customer{id=1, firstName='Marcin', lastName='Kkk'}]
