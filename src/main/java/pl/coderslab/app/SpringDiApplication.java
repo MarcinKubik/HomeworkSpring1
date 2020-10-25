@@ -3,6 +3,10 @@ package pl.coderslab.app;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import pl.coderslab.beans.*;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 
 public class SpringDiApplication {
@@ -10,7 +14,7 @@ public class SpringDiApplication {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
-        SimpleCustomerLogger customerLogger = context.getBean("simpleCustomerLogger", SimpleCustomerLogger.class);
+       /* SimpleCustomerLogger customerLogger = context.getBean("simpleCustomerLogger", SimpleCustomerLogger.class);
         customerLogger.log();
 
         MemoryCustomerRepository memoryCustomerRepository = context.getBean("memoryCustomerRepository", MemoryCustomerRepository.class);
@@ -21,9 +25,11 @@ public class SpringDiApplication {
         List<Customer> customers = memoryCustomerRepository.getCustomers();
         for (Customer c : customers){
             System.out.println(c);
-        }
-        FileCustomerLogger fileCustomerLogger = context.getBean("fileCustomerLogger", FileCustomerLogger.class);
-        fileCustomerLogger.log();
+        }*/
+
+
+        DBCustomerLogger dbCustomerLogger = context.getBean("dbCustomerLogger", DBCustomerLogger.class);
+        dbCustomerLogger.log();
         context.close();
     }
 }

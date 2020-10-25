@@ -1,1 +1,1 @@
-[Customer{id=1, firstName='Marcin', lastName='Kubik'}, Customer{id=1, firstName='Marcin', lastName='Kkk'}]
+2020-10-25T12:35:54.720405: Customer operation

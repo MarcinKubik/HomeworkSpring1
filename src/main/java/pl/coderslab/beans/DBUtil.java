@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 @Component
 public class DBUtil {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/homeworkSpring1?useSSL=false&characterEncoding=utf8";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/homeworkSpring1?useSSL=false&characterEncoding=utf8&serverTimezone=UTC";
 
     private static final String DB_USER = "root";
 
